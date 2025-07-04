@@ -1,25 +1,26 @@
-#Jogo da Cobrinha (Snake) em C com Ncurses#
+Jogo da Cobrinha (Snake) em C com Ncurses
 
 Um jogo clássico da cobrinha feito em C, usando ncurses (ou pdcurses) para rodar no terminal.
 Inclui cores, detecção de colisão, pausa e placar. Suporta Linux, macOS e Windows.
 
-##Descrição##
+
+Descrição
 
 Este é um clone simples do jogo Snake, com as seguintes características:
-
 Cobra que cresce ao comer frutas
 Pontuação exibida na tela
 Pausa/retomada com a tecla ESC
 Detecção de colisão com o próprio corpo
 Tela "Game Over" com opção de reiniciar ou sair
-⚙️ Requisitos
+
+
+Requisitos
 
 Linux/macOS
 Compilador C (gcc ou clang)
 Biblioteca ncurses
 Para instalar no Ubuntu/Debian:
-
-sudo apt install libncurses5-dev
+  sudo apt install libncurses5-dev
 No macOS (via Homebrew):
 
 brew install ncurses
