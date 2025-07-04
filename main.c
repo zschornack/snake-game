@@ -1,7 +1,14 @@
-#include <ncurses.h>
 #include <unistd.h>  // para usleep
 #include <stdlib.h> 
 #include <time.h> // para randomizar as frutas
+
+#if defined(_WIN32) || defined(_WIN64)
+    #include <curses.h>   // PDCurses no Windows
+    #include <windows.h>  // Para Sleep()
+#else
+    #include <ncurses.h>  // ncurses em Unix/Mac
+    #include <unistd.h>   // Para usleep()
+#endif
 
 #define UP 0
 #define DOWN 1
@@ -110,7 +117,12 @@ int main() {
         refresh();
 
         // delayzinho pq ta muito rapido
-        usleep(100000);
+        
+        #if defined(_WIN32) || defined(_WIN64)
+            Sleep(100); // milissegundos no Windows
+        #else
+            usleep(100000); // microssegundos em Unix/Mac
+        #endif
     }
 
     return 0;
