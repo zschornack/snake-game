@@ -24,7 +24,7 @@
   *gcc -o snake main.c -lncurses*
   
 **Windows (MinGW)**
-  *gcc -o snake.exe snake.c -lpdcurses*
+  *gcc -o snake.exe main.c -lpdcurses*
 
 ⚠️ Certifique-se de ter a biblioteca PDCurses instalada ou os arquivos .h e .a disponíveis.
 
@@ -39,16 +39,10 @@ Inicie o jogo rodando o binário:
   *snake.exe*
 
 ***Use as setas do teclado para mover a cobrinha:***
-↑ para cima
-↓ para baixo
-← para esquerda
-→ para direita
-Pressione ESC para pausar ou sair:
-ESC pausa o jogo (pressione novamente para retomar)
-Na tela de Game Over:
-ENTER reinicia
-ESC sai
-
+- ↑ para cima
+- ↓ para baixo
+- ← para esquerda
+- → para direita
 
 ## Compatibilidade
 
