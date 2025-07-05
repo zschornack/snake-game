@@ -25,11 +25,11 @@ void endgame(int pont) {
     mvprintw(LINES/2, (COLS - 9) / 2, "GAME OVER");
     attroff(COLOR_PAIR(4));
     attron(COLOR_PAIR(5));
-    mvprintw(LINES/2 + 1, (COLS - 14) / 2, "Pontuacao: %d", pont);
+    mvprintw(LINES/2 + 1, (COLS - 13) / 2, "Pontuacao: %d", pont);
     attroff(COLOR_PAIR(5));
     attron(COLOR_PAIR(6));
-    mvprintw(LINES/2 + 2, (COLS - 38) / 2, "ENTER - reiniciar");
-    mvprintw(LINES/2 + 3, (COLS - 28) / 2, "ESC - fechar o jogo");
+    mvprintw(LINES/2 + 2, (COLS - 17) / 2, "ENTER - reiniciar");
+    mvprintw(LINES/2 + 3, (COLS - 19) / 2, "ESC - fechar o jogo");
     attroff(COLOR_PAIR(6));
     refresh();
     int ch;
@@ -109,8 +109,8 @@ int main() {
             if (paused) {
                 nodelay(stdscr, FALSE); // input fica bloqueado durante pause, vai que o usuario faz besteira
                 clear();
-                mvprintw(LINES/2 - 1, (COLS - 10) / 2, "PAUSADO");
-                mvprintw(LINES/2, (COLS - 20) / 2, "Pontuacao: %d", length - 3);
+                mvprintw(LINES/2 - 1, (COLS - 7) / 2, "PAUSADO");
+                mvprintw(LINES/2, (COLS - 13) / 2, "Pontuacao: %d", length - 3);
                 mvprintw(LINES/2 + 1, (COLS - 38) / 2, "Pressione ESC novamente para continuar");
                 refresh();
             
